@@ -49,7 +49,6 @@ class Renderer {
       $color = $this->hexColorAllocate($canvas, $hexcolor);
       //imagefilledrectangle($canvas, $x, $y, 1, 1, $color);
       imagesetpixel($canvas, $x, $y, $color);
-      //ctx.fillRect(x, y, 1, 1);
       $x++;
       if($x == 189){ // go to new line
         $x = 0;

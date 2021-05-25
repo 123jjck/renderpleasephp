@@ -7,6 +7,7 @@
 ```php
 <?php
 require_once('renderer.php');
+header('Content-Type: image/jpeg');
 $renderer = new Renderer();
 echo $renderer->render($_POST['avatar'], 'jpeg'); // выведет JPEG аватара, срендеренного из POST параметра "avatar"
 ```

@@ -23,7 +23,7 @@ class Renderer {
 
     $canvas = $this->processRender($ava);
     ob_start(); 
-    imagejpeg ($canvas);
+    imagejpeg ($canvas, null, 100);
     $image_data = ob_get_contents(); 
     ob_end_clean(); 
     imagedestroy($canvas);

@@ -1,6 +1,6 @@
 <?php
-/* Render, please PHP
-by DevJjck, 2021 */
+/* Render, please PHP by DevJjck, 2021
+Original Render, please by Lunnaholy */
 class Renderer {
   public function __construct($x = 0, $y = 0) {
     $this->startX = $x;

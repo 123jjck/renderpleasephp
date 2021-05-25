@@ -29,7 +29,6 @@ class Renderer {
     imagedestroy($canvas);
 
     if($type == 'jpeg') {
-      header('Content-Type: image/jpeg');
       $image = $image_data;
     } else if($type == 'base64') {
       $image = base64_encode($image_data);

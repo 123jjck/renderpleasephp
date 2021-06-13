@@ -7,9 +7,9 @@
 ```php
 <?php
 require_once('renderer.php');
-header('Content-Type: image/jpeg');
+header('Content-Type: image/png');
 $renderer = new Renderer();
-echo $renderer->render($_POST['avatar'], 'jpeg'); // выведет JPEG аватара, срендеренного из POST параметра "avatar"
+echo $renderer->render($_POST['avatar'], 'png'); // выведет PNG аватара, срендеренного из POST параметра "avatar"
 ```
 Доступны следующие методы:
-- `render($ava, $type = 'jpeg')`: рендер аватара $ava и последующий его вывод в формате $type (base64 или jpeg)
+- `render($ava, $type = 'jpeg')`: рендер аватара $ava и последующий его вывод в формате $type (base64, jpeg или png)

@@ -23,12 +23,14 @@ class Renderer {
 
     $canvas = $this->processRender($ava);
     ob_start(); 
-    imagejpeg ($canvas, null, 100);
+
+    if($type == 'jpeg') imagejpeg ($canvas, null, 100);
+    if($type == 'png' || $type = 'base64') imagepng ($canvas, null, 0);
     $image_data = ob_get_contents(); 
     ob_end_clean(); 
     imagedestroy($canvas);
 
-    if($type == 'jpeg') {
+    if($type == 'jpeg' || $type == 'png') {
       $image = $image_data;
     } else if($type == 'base64') {
       $image = base64_encode($image_data);
@@ -58,3 +60,4 @@ class Renderer {
     return $canvas;
   }
 }
+?>

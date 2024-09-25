@@ -17,7 +17,7 @@ echo $renderer->render($_POST['avatar'], 'png'); // выведет PNG ават�
 <?php
 require_once('renderer.php');
 $renderer = new Renderer();
-echo $renderer->render($_POST['avatar'], 'png', 'avatar.png'); // сохранит PNG аватара, срендеренного из POST параметра "avatar", в файл 'avatar.png'
+$renderer->render($_POST['avatar'], 'png', 'avatar.png'); // сохранит PNG аватара, срендеренного из POST параметра "avatar", в файл 'avatar.png'
 ```
 
 Доступны следующие методы:
